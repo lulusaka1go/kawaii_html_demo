@@ -17,7 +17,7 @@ window.onload = function(){
   var mc = new Hammer(myElement);
 
   // panup pandownを使えるようにする。(panmoveはなくても使える。)
-  // mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
   // panmoveが起こる限りずっとハンドラ実行
   mc.on("panmove", function(ev) {
