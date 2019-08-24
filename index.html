@@ -18,10 +18,13 @@ window.onload = function(){
 //   // create a simple instance
 //   // by default, it only adds horizontal recognizers
   var myElement = document.querySelector('#top');
+  var myElement02 = document.querySelector('.main');
   var mc = new Hammer(myElement);
+  var mc02 = new Hammer(myElement02);
 //
   // panup pandownを使えるようにする。(panmoveはなくても使える。)
   mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  mc02.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 //
 //   // panmoveが起こる限りずっとハンドラ実行
 //   mc.on("panmove", function(ev) {
