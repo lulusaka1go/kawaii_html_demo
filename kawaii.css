@@ -1,0 +1,69 @@
+
+img{
+  position: absolute;
+  bottom: -15vh;
+  left: -15vw;
+  width: 135vw;
+}
+
+#top{
+  transform-origin: bottom center;
+  animation-name: breathing;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#head{
+  transform-origin: bottom 80%;
+  animation-name: breathing_head;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+#down{
+  transform-origin: bottom center;
+  animation-name: breathing;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes breathing {
+  0%{
+    -webkit-transform: scaleY(1) translateY(0px);
+  }
+  50%{
+    -webkit-transform: scaleY(1.005) translateY(-1px);
+  }
+  100%{
+    -webkit-transform: scaleY(1) translateY(0px);
+  }
+}
+
+@keyframes breathing_head {
+  0%{
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50%{
+    -webkit-transform: translateY(-3px) rotate(-0.1deg);
+  }
+  100%{
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+}
+
+body{
+  margin: 0 auto;
+}
+
+.main{
+  position: relative;
+  z-index: 9999;
+
+  width: 100%;
+  height: 100vh;
+
+  border: 3px solid orange;
+  box-sizing: border-box;
+
+  overflow: hidden;
+}
