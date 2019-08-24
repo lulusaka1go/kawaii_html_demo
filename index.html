@@ -10,16 +10,18 @@
 
 window.onload = function(){
   document.body.style.height = window.innerHeight + 'px';
+  
 //
 //   var myElement = document.getElementById('myElement');
 //   var myElement02 = document.getElementById('comment');
 //
 //   // create a simple instance
 //   // by default, it only adds horizontal recognizers
-//   var mc = new Hammer(myElement);
+  var myElement = document.getElementsByTagName('html')[0];
+  var mc = new Hammer(myElement);
 //
-//   // panup pandownを使えるようにする。(panmoveはなくても使える。)
-//   // mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+  // panup pandownを使えるようにする。(panmoveはなくても使える。)
+  mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 //
 //   // panmoveが起こる限りずっとハンドラ実行
 //   mc.on("panmove", function(ev) {
