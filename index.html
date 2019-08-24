@@ -4,59 +4,53 @@
 <head>
 <meta name="viewport" content="width=device-width,user-scalable=no">
 <meta charset="utf-8">
+<link rel="stylesheet" href="./kawaii.css">
 <script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <script type="text/javascript">
 
-window.onload = function(){
-
-  var myElement = document.getElementById('myElement');
-  var myElement02 = document.getElementById('comment');
-
-  // create a simple instance
-  // by default, it only adds horizontal recognizers
-  var mc = new Hammer(myElement);
-
-  // panup pandownを使えるようにする。(panmoveはなくても使える。)
-  mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-
-  // panmoveが起こる限りずっとハンドラ実行
-  mc.on("panmove", function(ev) {
-      myElement.innerHTML = ev.type + " gesture<br>Time: " + ev.deltaTime ;
-
-      // panmoveの持続時間で処理が変わる。
-      if( ev.deltaTime >= 5000 ){
-          myElement02.textContent = 'too much !!';
-      }else if( ev.deltaTime >= 1000 ){
-          myElement02.textContent = 'more';
-      }else{
-        myElement02.textContent = 'デフォ';
-      }
-
-  });
-
-}
+// window.onload = function(){
+//
+//   var myElement = document.getElementById('myElement');
+//   var myElement02 = document.getElementById('comment');
+//
+//   // create a simple instance
+//   // by default, it only adds horizontal recognizers
+//   var mc = new Hammer(myElement);
+//
+//   // panup pandownを使えるようにする。(panmoveはなくても使える。)
+//   // mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+//
+//   // panmoveが起こる限りずっとハンドラ実行
+//   mc.on("panmove", function(ev) {
+//       myElement.innerHTML = ev.type + " gesture<br>Time: " + ev.deltaTime ;
+//
+//       // panmoveの持続時間で処理が変わる。
+//       if( ev.deltaTime >= 5000 ){
+//           myElement02.textContent = 'too much !!';
+//       }else if( ev.deltaTime >= 1000 ){
+//           myElement02.textContent = 'more';
+//       }else{
+//         myElement02.textContent = 'デフォ';
+//       }
+//
+//   });
+//
+// }
 
 </script>
 
-<style type="text/css">
-#myElement {
-  margin: 0 auto;
-  background: silver;
-  height: 200px;
-  width: 200px;
-  text-align: center;
-  font-size: 25px;
-  line-height: 50px;
-}
-</style>
-<title>test</title>
+<title>kawaii_html_</title>
 </head>
 
 <body>
 
-  <div id="myElement">
+  <div class="main">
+    <img id="top" src="./03kawaii_html_body.png">
+    <img id="head" src="./01kawaii_html_head.png">
+    <img id="head" src="./瞬き.png">
+    <img id="down" src="./02kawaii_html_legs.png">
   </div>
-  <p id="comment">デフォ</p>
+
 
 
 </body>
